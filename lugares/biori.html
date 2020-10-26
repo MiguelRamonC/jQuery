@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estiloLugares.css">
+    <title>BIORI</title>
+</head>
+<body>
+    <header>
+        <h1>Orizaba pueblo mágico</h1>
+        <h3>BIORI</h3>
+      </header>
+
+      <nav>
+        <ul id="menu">
+          <li class="lista"> <div><a href="../index.html"> Inicio </a>
+
+             <li class="lista"> <div><a href="../historia.html"> Historia </a>
+            </li>   
+    
+            <li class="lista"> <div>Lugares</div>
+                <ul>
+                    <li><div><a href="lugares.html">Ver Todos</a></div></li>
+                    <li><div><a href="telferico.html">Teleférico</a></div></li>
+                    <li><div><a href="paseo.html">Ojo de Agua</a></div></li>
+                    <li><div><a href="paseo.html">Pase del Río</a></div></li>
+                    <li><div><a href="alameda.html">Alameda</a></div></li>
+                    <li><div><a href="palacio.html">Palacio de Hierro</a></div></li>
+                    <li><div><a href="biori.html">BIORI</a></div></li>
+                </ul>
+            </li>
+            
+            <li class="lista"><div>Leyendas</div>
+                <ul>
+                    <li><div><a href="../leyendas.html">La Niña y el Ángel</a></div></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+      <div id="caja">
+        <img id="imagen" src="../img/jardin.jpg" alt="">
+            
+        <p id="descrip">Aquí pódrás disfrutar de los jardines de Rosales, Japonés (que cuenta con una gran variedad de bonsáis), de Plantas Etnobotánicas, de Café, Bromeliario, de Polinizadores, el Orquideario más grande de México y un Mariposario.
+          Y admirar especies florales como lavanda, estragón, epazote, tomillo, orégano, manzanilla, ruda, albahaca, romero, té negro, insulina, entre otras.
+          Cuenta con diversas figuras monumentales y estatuas milenarias que decoran sus amplias sendas, además de un gran estanque con plantas acuáticas y organismos animales.
+          El 12 de diciembre de 2019 la Secretaría de Medio Ambiente del Estado de Veracruz entregó a Orizaba el premio al Primer Lugar Estatal en Acciones Pro Ambientales en Veracruz por este proyecto.</p>
+
+       </div>
+
+       <script>
+        $(document).ready(function(){
+          $("#menu").menu({
+              position: { my: "center top", at: "right bottom" }
+          }); 
+      });
+     </script>
+      
+</body>
+</html>

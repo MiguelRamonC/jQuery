@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estiloLugares.css">
+    <title>Ojo de Agua</title>
+</head>
+<body>
+    <header>
+        <h1>Orizaba pueblo mágico</h1>
+        <h3>Ojo de Agua</h3>
+      </header>
+
+      <nav>
+        <ul id="menu">
+          <li class="lista"> <div><a href="../index.html"> Inicio </a>
+
+             <li class="lista"> <div><a href="../historia.html"> Historia </a>
+            </li>   
+    
+            <li class="lista"> <div>Lugares</div>
+                <ul>
+                    <li><div><a href="lugares.html">Ver Todos</a></div></li>
+                    <li><div><a href="telferico.html">Teleférico</a></div></li>
+                    <li><div><a href="paseo.html">Ojo de Agua</a></div></li>
+                    <li><div><a href="paseo.html">Pase del Río</a></div></li>
+                    <li><div><a href="alameda.html">Alameda</a></div></li>
+                    <li><div><a href="palacio.html">Palacio de Hierro</a></div></li>
+                    <li><div><a href="biori.html">BIORI</a></div></li>
+                </ul>
+            </li>
+            
+            <li class="lista"><div>Leyendas</div>
+                <ul>
+                    <li><div><a href="../leyendas.html">La Niña y el Ángel</a></div></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+      <div id="caja">
+        <img id="imagen" src="../img/ojo.jpg" alt="">
+            
+        <p id="descrip">Este es el sitio de esparcimiento ideal: en las frescas aguas de la laguna podrás echarte un clavado y nadar para refrescarte, podrás disfrutar de las maravillosas vistas naturales que ofrece o degustar algún platillo típico de la ciudad. Para los niños nada mejor que el Parque Acuático.
+          La laguna dio origen a una leyenda. Se dice que cada 24 de junio, una sirena emerge del agua en busca de algún hombre que la lleve cargando a la iglesia más cercana a cambio de riqueza; nadie ha podido hacerlo, ya que terminan por descubrir que lo que van cargando es un terrible monstruo.</p>
+
+       </div>
+
+       <script>
+        $(document).ready(function(){
+          $("#menu").menu({
+              position: { my: "center top", at: "right bottom" }
+          }); 
+      });
+     </script>
+      
+</body>
+</html>

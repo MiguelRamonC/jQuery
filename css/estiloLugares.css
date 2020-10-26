@@ -1,0 +1,9 @@
+.lista div, .lista a{
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.938);
+}
+
+
+h3{
+    margin: 60px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estiloLugares.css">
+    <title>Lugares</title>
+</head>
+<body>
+    <header>
+        <h1>Orizaba pueblo mágico</h1>
+        <h3>Lugares</h3>
+      </header>
+    
+      <nav>
+        <ul id="menu">
+            <li class="lista"> <div><a href="../index.html"> Inicio </a>
+
+             <li class="lista"> <div><a href="../historia.html"> Historia </a>
+            </li>   
+    
+            <li class="lista"> <div>Lugares</div>
+                <ul>
+                    <li><div><a href="lugares.html">Ver Todos</a></div></li>
+                    <li><div><a href="telferico.html">Teleférico</a></div></li>
+                    <li><div><a href="paseo.html">Ojo de Agua</a></div></li>
+                    <li><div><a href="paseo.html">Pase del Río</a></div></li>
+                    <li><div><a href="alameda.html">Alameda</a></div></li>
+                    <li><div><a href="palacio.html">Palacio de Hierro</a></div></li>
+                    <li><div><a href="biori.html">BIORI</a></div></li>
+                </ul>
+            </li>
+            
+            <li class="lista"><div>Leyendas</div>
+                <ul>
+                    <li><div><a href="../leyendas.html">La Niña y el Ángel</a></div></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="draggable" title="telferico.html">
+        <div class="titulo">Teleférico</div>
+        <img class="imgLugares" src="../img/teleferico.jpg"  >       
+    </div>
+    
+    <div id="draggable2" title="ojoAgua.html">
+        <div class="titulo">Ojo de Agua</div>
+        <img class="imgLugares" src="../img/ojo.jpg"  >       
+    </div>
+
+    <div id="draggable3" title="paseo.html">
+        <div class="titulo">Paseo del Río</div>
+        <img class="imgLugares" src="../img/paseo.jpg"  >       
+    </div>
+
+    <div id="draggable4" title="alameda.html">
+        <div class="titulo">Alameda</div>
+        <img class="imgLugares" src="../img/alameda.jpg"  >       
+    </div>
+    
+    <div id="draggable4" title="biori.html">
+        <div class="titulo">BIORI</div>
+        <img class="imgLugares" src="../img/jardin.jpg"  >       
+    </div>
+
+    <div id="draggable4" title="palacio.html" >
+        <div class="titulo">Palacio de Hierro</div>
+        <img class="imgLugares" src="../img/palacio.jpg"  >       
+    </div>
+
+
+    <div class="soltar">
+        <p>Soltar aquí</p>
+    </div>
+
+    <div id="dialog-confirm" title="¿Quiere ver más información">
+    </div>
+
+    <script>
+        $( function() {
+            $( "#draggable,#draggable2,#draggable3,#draggable4").draggable();
+        } );
+
+        $('.soltar').droppable({
+                hoverClass: "encima",
+                drop: function (even, m){
+                    $('.soltar').addClass('soltado').find("p").text('Elemento soltado'); 
+
+                    $( "#dialog-confirm" ).dialog({
+                        resizable: false,
+                        height: "auto",
+                        width: 400,
+                        modal: true,
+                        buttons: {
+                            "¡Sí quiero!": function() {
+                             $(window).attr('location',$(m.draggable).attr('title'))
+                             
+                    },
+                    Cancel: function() {
+                    $( this ).dialog( "close" );
+                    }
+                }
+                });
+            }
+
+            
+          
+           
+       
+        });
+
+        $("#menu").menu({
+                position: { my: "center top", at: "right bottom" }
+            }); 
+    </script>
+</body>
+</html>
